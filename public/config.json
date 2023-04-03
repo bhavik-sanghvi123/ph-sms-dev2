@@ -1,0 +1,97 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData":
+    {
+        "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "message"
+    },
+
+    "type": "REST",
+    "lang":
+    {
+        "en-US":
+        {
+            "name": "PH SMS Extension",
+            "description": "SMS Application Abbott ",
+            "step1Label": "Configure Activity"
+        }
+    },
+    "arguments":
+    {
+        "execute":
+        {
+            "inArguments": [
+                { 
+                    "firstName": "{{Contact.Attribute.SMS_Test_MY.FirstName}}",
+                    "lastName": "{{Contact.Attribute.SMS_Test_MY.LastName}}", 
+                    "phoneNumber": "{{Contact.Attribute.SMS_Test_MY.Mobile}}",
+                    "selectedMsgID": "",
+                    "campaignName": "",
+                    "contactID": "",
+                    "smsBoolean": "",
+                    "shortMsg": ""
+                }
+            ],
+            "outArguments": [],
+            "url": "https://ph-sms-app-tiger-dev.herokuapp.com/journeybuilder/execute",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    
+    "configurationArguments":
+    {
+        "applicationExtensionKey": "21b178cd-2707-4a31-81c5-0e3972166fd9",
+        "save":
+        {
+            "url": "https://ph-sms-app-tiger-dev.herokuapp.com/journeybuilder/save",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "publish":
+        {
+            "url": "https://ph-sms-app-tiger-dev.herokuapp.com/journeybuilder/publish",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "stop":
+        {
+            "url": "https://ph-sms-app-tiger-dev.herokuapp.com/journeybuilder/stop",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "validate":
+        {
+            "url": "https://ph-sms-app-tiger-dev.herokuapp.com/journeybuilder/validate",
+            "verb": "POST",
+            "useJwt": true
+        }
+    },
+    "wizardSteps": [
+    {
+        "label": "Configure Activity",
+        "key": "step1"
+    }],
+    "userInterfaces":
+    {
+        "configModal": {
+            "height": 700,
+            "width": 1000,
+            "fullscreen": false
+        }
+    },
+    "schema": 
+    {
+        "arguments":{
+            "execute": {
+                "inArguments": [],
+                "outArguments": []
+            }
+        }
+    }
+}

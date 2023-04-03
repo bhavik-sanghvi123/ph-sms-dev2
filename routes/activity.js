@@ -205,7 +205,7 @@ exports.requestTemplate = function (req, res) {
         clientSecret: '7Tcy9fkZHZrtkEd3V53W1DPq'//''oKkyc5gP26ibpgO7P8h0r8YC
     })
     .then(function (response) {
-        let accessToken = response.data['access_token']; // After getting token, parse it through to grab the individual categories
+        let accessToken = response.data['accessToken']; // After getting token, parse it through to grab the individual categories
 
         axios.get(queryURL, { //Query of Individual items
             headers: { Authorization: `Bearer ${accessToken}` } 

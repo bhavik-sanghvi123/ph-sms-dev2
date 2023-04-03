@@ -201,8 +201,8 @@ exports.requestTemplate = function (req, res) {
     var axios = require('axios');
     axios.post(tokenURL, { // Retrieving of token
         //grant_type: 'client_credentials',
-        client_id: 'xbv8eehpk7nks62jbcqj6ebs',//'y6xffr6xu7ycdbsi1laoms2a',
-        client_secret: '7Tcy9fkZHZrtkEd3V53W1DPq'//''oKkyc5gP26ibpgO7P8h0r8YC
+        clientId: 'xbv8eehpk7nks62jbcqj6ebs',//'y6xffr6xu7ycdbsi1laoms2a',
+        clientSecret: '7Tcy9fkZHZrtkEd3V53W1DPq'//''oKkyc5gP26ibpgO7P8h0r8YC
     })
     .then(function (response) {
         let accessToken = response.data['access_token']; // After getting token, parse it through to grab the individual categories

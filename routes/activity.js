@@ -194,7 +194,7 @@ exports.stop = function (req, res) {
  * GET Handler for requesting the template type.
  */
 exports.requestTemplate = function (req, res) {
-    const tokenURL = 'https://mcrcd9q885yh55z97cmhf8r1hy80.auth.marketingcloudapis.com/v2/token';
+    const tokenURL = 'https://mcrcd9q885yh55z97cmhf8r1hy80.auth.marketingcloudapis.com/v1/requestToken';
     // const queryURL = 'https://mcrcd9q885yh55z97cmhf8r1hy80.rest.marketingcloudapis.com/asset/v1/content/categories';
     const queryURL = 'https://mcrcd9q885yh55z97cmhf8r1hy80.rest.marketingcloudapis.com/asset/v1/content/assets?$pageSize=2500&$page=1&$orderBy=name';
     
